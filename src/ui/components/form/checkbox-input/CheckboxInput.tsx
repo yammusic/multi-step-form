@@ -26,6 +26,7 @@ export function CheckboxInput(props: Readonly<CheckboxInputProps>) {
     <div className="flex flex-col gap-x-3">
       <div className="flex items-center gap-x-3">
         <input
+          aria-invalid={ hasError }
           className={ styles }
           id={ name }
           name={ name }
@@ -39,7 +40,14 @@ export function CheckboxInput(props: Readonly<CheckboxInputProps>) {
 
       </div>
 
-      { !!hasError && <p className="ml-2 text-xs text-red-500">{ error.message }</p>}
+      { !!hasError && (
+        <p
+          className="ml-2 text-xs text-red-500"
+          id={ `${name}-error` }
+        >
+          { error.message }
+        </p>
+      ) }
     </div>
   )
 }

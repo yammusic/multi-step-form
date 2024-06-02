@@ -35,6 +35,8 @@ export function SelectInput(props: Readonly<SelectInputProps>) {
 
       <div className="mt-2">
         <select
+          aria-describedby={ helperText ? `${name}-helper-text` : undefined }
+          aria-invalid={ hasError }
           className={ styles }
           id={ name }
           name={ name }
@@ -47,9 +49,23 @@ export function SelectInput(props: Readonly<SelectInputProps>) {
           )) }
         </select>
 
-        { !!helperText && <p className="ml-2 text-xs text-gray-500">{ helperText }</p>}
+        { !!helperText && (
+          <p
+            className="ml-2 text-xs text-gray-500"
+            id={ `${name}-helper-text` }
+          >
+            { helperText }
+          </p>
+        ) }
 
-        { !!hasError && <p className="ml-2 text-xs text-red-500">{ error.message }</p>}
+        { !!hasError && (
+          <p
+            className="ml-2 text-xs text-red-500"
+            id={ `${name}-error` }
+          >
+            { error.message }
+          </p>
+        ) }
       </div>
     </div>
   )

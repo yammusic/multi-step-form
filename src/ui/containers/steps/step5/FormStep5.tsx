@@ -68,7 +68,7 @@ export function FormStep5(props: Readonly<FormStep5Props>) {
           control={ control }
           name="aboutService"
           render={ ({ field }) => (
-            <div className="grid grid-cols-3 gap-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4">
               <RadioInput
                 checked={ aboutService === 'onlineAds' }
                 error={ errors?.aboutService }

@@ -39,6 +39,8 @@ export function TextInput(props: Readonly<TextInputProps>) {
       <div className="mt-2">
         { !!mask && (
           <MaskedInput
+            aria-describedby={ helperText ? `${name}-helper-text` : undefined }
+            aria-invalid={ hasError }
             className={ styles }
             id={ name }
             maskGenerator={ maskGenerator }
@@ -52,6 +54,8 @@ export function TextInput(props: Readonly<TextInputProps>) {
 
         { !mask && (
           <input
+            aria-describedby={ helperText ? `${name}-helper-text` : undefined }
+            aria-invalid={ hasError }
             className={ styles }
             id={ name }
             name={ name }
@@ -60,9 +64,23 @@ export function TextInput(props: Readonly<TextInputProps>) {
           />
         ) }
 
-        { !!helperText && <p className="ml-2 text-xs text-gray-500">{ helperText }</p>}
+        { !!helperText && (
+          <p
+            className="ml-2 text-xs text-gray-500"
+            id={ `${name}-helper-text` }
+          >
+            { helperText }
+          </p>
+        ) }
 
-        { !!hasError && <p className="ml-2 text-xs text-red-500">{ error.message }</p>}
+        { !!hasError && (
+          <p
+            className="ml-2 text-xs text-red-500"
+            id={ `${name}-error` }
+          >
+            { error.message }
+          </p>
+        ) }
       </div>
     </div>
   )
