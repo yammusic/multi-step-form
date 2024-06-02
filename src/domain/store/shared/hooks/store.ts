@@ -3,6 +3,20 @@
 import { useDispatch, useSelector, useStore } from 'react-redux'
 import type { AppDispatch, AppStore, RootState } from '../types/store'
 
+/**
+ * A custom hook that returns the useDispatch hook with type annotations.
+ * @returns {AppDispatch} The typed dispatch function.
+ */
 export const useAppDispatch =  useDispatch.withTypes<AppDispatch>()
+
+/**
+ * A custom hook that returns the useSelector hook with type annotations.
+ * @returns {RootState} The typed state selector function.
+ */
 export const useAppSelector = useSelector.withTypes<RootState>()
+
+/**
+ * A custom hook that returns the useStore hook with type annotations.
+ * @returns {AppStore} The typed store object.
+ */
 export const useAppStore = useStore.withTypes<AppStore>()

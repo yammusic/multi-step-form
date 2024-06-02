@@ -1,6 +1,9 @@
 import React from 'react'
 import { MultiPartForm } from '@/app/containers/multi-part-form'
 
+/**
+ * Renders the Home component, which displays the main content of the page.
+ */
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center md:px-24 px-16 py-24 ">

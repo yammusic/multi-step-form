@@ -13,6 +13,9 @@ interface Props {
   children: ReactNode
 }
 
+/**
+ * Renders the root layout component with the provided children.
+ */
 export default function RootLayout({ children }: Readonly<Props>) {
   return (
     <AppLayout>
