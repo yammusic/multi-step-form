@@ -15,7 +15,6 @@ This is a multi-step form application implemented using React and Next.js. The f
 
 [https://multi-step-form-pz634l6iw-hackettyam.vercel.app/](https://multi-step-form-pz634l6iw-hackettyam.vercel.app/)
 
-
 ## Functionalities
 
 - **Multi-step Navigation**: Users can move forward and backward through the form steps.
@@ -26,17 +25,16 @@ This is a multi-step form application implemented using React and Next.js. The f
 - **Responsive Design**: The form is styled using Tailwind CSS for a clean and responsive user interface.
 - **Accessibility**: The form includes accessibility features to ensure a good user experience for all users.
 
-
 ## Tech Stack
 
-- [React](https://reactjs.org/)
+- [React](https://reactjs.dev/)
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Redux Persist](https://github.com/rt2zz/redux-persist)
 - [React Hook Form](https://react-hook-form.com/)
-- [React Hook Mask](https://github.com/rodrigobezerra/react-hook-mask)
-- [React Tailwind CSS Datepicker](https://react-tailwindcss-datepicker.netlify.app/)
+- [React Hook Mask](https://github.com/lucasbasquerotto/react-masked-input)
+- [React Tailwind CSS Datepicker](https://react-tailwindcss-datepicker.vercel.app/)
 - [Axios](https://axios-http.com/)
 - [Day.js](https://day.js.org/)
 - [Framer Motion](https://www.framer.com/motion/)
@@ -44,12 +42,10 @@ This is a multi-step form application implemented using React and Next.js. The f
 - [Testing Library](https://testing-library.com/)
 - [Typescript](https://www.typescriptlang.org/)
 
-
 ## Additional Resources
 
 - Test API for Personal Profile: [https://run.mocky.io/v3/892bc38b-c7e2-4432-a478-2eac4df57942](https://run.mocky.io/v3/892bc38b-c7e2-4432-a478-2eac4df57942)
 - Test API for Business Profile: [https://run.mocky.io/v3/e1724715-51d4-4ed2-b20f-cd3c59659e47](https://run.mocky.io/v3/e1724715-51d4-4ed2-b20f-cd3c59659e47)
-
 
 ## Run the app
 
@@ -76,7 +72,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 > ```bash
 > npm run start
 > ```
-
 
 ## Run the tests
 
