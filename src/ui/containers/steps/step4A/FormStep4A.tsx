@@ -7,6 +7,21 @@ import { Controller, useForm } from 'react-hook-form'
 import { DateInput, SelectInput } from '@/app/components'
 import type { FormStep4AFields, FormStep4AProps } from './types'
 
+/**
+ * Component for rendering Step 4 (Personal) of a multi-step form.
+ *
+ * @param props - The props for the Step 4 form component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <FormStep4A
+ *   onSubmit={(data) => console.log(data)}
+ *   onCancel={() => console.log('Cancel')}
+ *   values={{ dateOfBirth: '1990-01-01', gender: 'male' }}
+ * />
+ * ```
+ */
 export function FormStep4A(props: Readonly<FormStep4AProps>) {
   const { onSubmit, onCancel, values } = props
   const { handleSubmit, formState: { errors }, control } = useForm<FormStep4AFields>({

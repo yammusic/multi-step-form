@@ -17,6 +17,15 @@ import { Step4B } from '../steps/step4B'
 import { Step5 } from '../steps/step5'
 import { mapStepsValuesToData } from './utils'
 
+/**
+ * A multi-step form component.
+ *
+ * @param props - The props for the MultiPartForm component.
+ * @returns A JSX element representing the MultiPartForm component.
+ *
+ * @example
+ * <MultiPartForm />
+ */
 export function MultiPartForm() {
   const [step, setStep] = useState(1)
   const [showSnackbar, setShowSnackbar] = useState(false)

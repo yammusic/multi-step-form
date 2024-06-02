@@ -7,6 +7,21 @@ import { Controller, useForm } from 'react-hook-form'
 import { SelectInput, TextInput } from '@/app/components'
 import type { FormStep4BFields, FormStep4BProps } from './types'
 
+/**
+ * Component for rendering Step 4 (Business) of a multi-step form.
+ *
+ * @param props - The props for the Step 4 form component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <FormStep4B
+ *   onSubmit={(data) => console.log(data)}
+ *   onCancel={() => console.log('Cancel')}
+ *   values={{ companyName: 'Google', companySize: '1-10', companyRole: 'Engineer' }}
+ * />
+ * ```
+ */
 export function FormStep4B(props: Readonly<FormStep4BProps>) {
   const { onSubmit, onCancel, values } = props
   const { handleSubmit, formState: { errors }, control } = useForm<FormStep4BFields>({

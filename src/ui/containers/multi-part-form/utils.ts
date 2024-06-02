@@ -7,6 +7,9 @@ import type {
   FormStep5Fields,
 } from '../steps'
 
+/**
+ * Represents the combined form field values from all steps.
+ */
 type Values = FormStep1Fields
   & FormStep2Fields
   & FormStep3Fields
@@ -14,7 +17,21 @@ type Values = FormStep1Fields
   & FormStep4BFields
   & FormStep5Fields
 
-
+  /**
+ * Maps the values from form steps to the data structure required for submission.
+ *
+ * @param values - The combined form field values.
+ * @returns The mapped data structure ready for submission.
+ *
+ * @example
+ * const formValues = {
+ *   fullName: 'John Doe',
+ *   email: 'john.doe@example.com',
+ *   // Other form values...
+ * };
+ * const data = mapStepsValuesToData(formValues);
+ * console.log(data); // Output: { full_name: 'John Doe', email: 'john.doe@example.com', ... }
+ */
 export const mapStepsValuesToData = (values: Values) => {
   const data: any = {
     full_name: values.fullName,

@@ -8,6 +8,21 @@ import { TextInput } from '@/app/components/form'
 import { REGEX_POSTAL_CODE } from '@/domain/constants'
 import type { FormStep2Fields, FormStep2Props } from './types'
 
+/**
+ * Component for rendering Step 2 of a multi-step form.
+ *
+ * @param props - The props for the Step 2 form component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <FormStep2
+ *   onSubmit={(data) => console.log(data)}
+ *   onCancel={() => console.log('Cancelled')}
+ *   values={{ address: '123 Main St', city: 'Anytown', postalCode: '12345', country: 'USA' }}
+ * />
+ * ```
+ */
 export function FormStep2(props: Readonly<FormStep2Props>) {
   const { onSubmit, onCancel, values } = props
   const { handleSubmit, formState: { errors }, control } = useForm<FormStep2Fields>({

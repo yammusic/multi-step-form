@@ -7,6 +7,21 @@ import { Controller, useForm, useWatch } from 'react-hook-form'
 import { CheckboxInput, RadioInput } from '@/app/components'
 import type { FormStep5Fields, FormStep5Props } from './types'
 
+/**
+ * Component for rendering Step 5 of a multi-step form.
+ *
+ * @param props - The props for the Step 5 form component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <FormStep5
+ *   onSubmit={(data) => console.log(data)}
+ *   onCancel={() => console.log('Cancel')}
+ *   values={{ notifications: false, aboutService: 'Social media', terms: true }}
+ * />
+ * ```
+ */
 export function FormStep5(props: Readonly<FormStep5Props>) {
   const { onSubmit, onCancel, values } = props
   const { handleSubmit, formState: { errors }, control } = useForm<FormStep5Fields>({

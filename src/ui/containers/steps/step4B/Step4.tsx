@@ -8,6 +8,20 @@ import { useAppActions, useAppState } from '@/domain/store'
 import { FormStep4B } from './FormStep4B'
 import type { FormStep4BFields, Step4BProps } from './types'
 
+/**
+ * Component for rendering Step 4 (Business) of a multi-step form.
+ *
+ * @param props - The props for the Step 4 (Business) component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <Step4B
+ *  onNext={(data) => console.log(data)}
+ *  onPrev={() => console.log('Back to previous step')}
+ * />
+ * ```
+ */
 export function Step4B(props: Readonly<Step4BProps>) {
   const { onNext, onPrev } = props
   const { step4BData } = useAppState()

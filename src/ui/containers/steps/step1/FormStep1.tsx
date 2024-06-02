@@ -8,6 +8,20 @@ import { TextInput } from '@/app/components/form'
 import { REGEX_EMAIL, REGEX_PHONE_NUMBER, REGEX_TWO_WORDS_OR_MORE } from '@/domain/constants'
 import type { FormStep1Fields, FormStep1Props } from './types'
 
+/**
+ * Component for rendering Step 1 of a multi-step form.
+ *
+ * @param props - The props for the Step 1 form component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <FormStep1
+ *   onSubmit={(data) => console.log(data)}
+ *   values={{ fullName: 'Jane Smith', email: 'jane@example.com', phoneNumber: '(555) 555-5555' }}
+ * />
+ * ```
+ */
 export function FormStep1(props: Readonly<FormStep1Props>) {
   const { onSubmit, values } = props
   const { handleSubmit, formState: { errors }, control } = useForm<FormStep1Fields>({

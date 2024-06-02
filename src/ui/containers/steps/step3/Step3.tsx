@@ -8,6 +8,20 @@ import { useAppActions, useAppState } from '@/domain/store'
 import { FormStep3 } from './FormStep3'
 import type { FormStep3Fields, Step3Props } from './types'
 
+/**
+ * Component for rendering Step 3 of a multi-step form.
+ *
+ * @param props - The props for the Step 3 component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <Step3
+ *  onNext={(data) => console.log(data)}
+ *  onPrev={() => console.log('Back to previous step')}
+ * />
+ * ```
+ */
 export function Step3(props: Readonly<Step3Props>) {
   const { onNext, onPrev } = props
   const { step3Data } = useAppState()

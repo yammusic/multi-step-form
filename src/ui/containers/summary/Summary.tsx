@@ -3,6 +3,33 @@ import React from 'react'
 import { DivMotion } from '@/app/components'
 import type { SummaryProps } from './types'
 
+/**
+ * Component for displaying a summary of user data.
+ *
+ * @param props - The props for the Summary component.
+ * @returns A JSX element representing the Summary component.
+ *
+ * @example
+ * <Summary
+ *   data={{
+ *     full_name: 'John Doe',
+ *     email: 'john.doe@example.com',
+ *     phone_number: '+1234567890',
+ *     street_address: '123 Main St',
+ *     city: 'New York',
+ *     postal_code: '10001',
+ *     country: 'USA',
+ *     username: 'johndoe123',
+ *     password: '********',
+ *     profile_type: 'Personal',
+ *     personal_info: {
+ *       date_of_birth: '1990-01-01',
+ *       gender: 'Male'
+ *     }
+ *   }}
+ *   onClose={() => console.log('Summary closed')}
+ * />
+ */
 export function Summary(props: Readonly<SummaryProps>) {
   const { data, onClose } = props
 

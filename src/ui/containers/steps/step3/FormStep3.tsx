@@ -8,6 +8,21 @@ import { RadioInput, TextInput } from '@/app/components'
 import { REGEX_STRONG_PASSWORD } from '@/domain/constants'
 import type { FormStep3Fields, FormStep3Props } from './types'
 
+/**
+ * Component for rendering Step 3 of a multi-step form.
+ *
+ * @param props - The props for the Step 3 form component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <FormStep3
+ *   onSubmit={(data) => console.log(data)}
+ *   onCancel={() => console.log('Cancel')}
+ *   values={{ username: 'jane123', password: 'password123', repeatPassword: 'password123', profileType: 'personal' }}
+ * />
+ * ```
+ */
 export function FormStep3(props: Readonly<FormStep3Props>) {
   const { onSubmit, onCancel, values } = props
   const { handleSubmit, formState: { errors }, control } = useForm<FormStep3Fields>({

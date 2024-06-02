@@ -7,6 +7,20 @@ import { FormStep5 } from './FormStep5'
 import type { FormStep5Fields, Step5Props } from './types'
 import { useAppActions, useAppState } from '@/domain/store'
 
+/**
+ * Component for rendering Step 5 of a multi-step form.
+ *
+ * @param props - The props for the Step 5 component.
+ * @returns A React component.
+ *
+ * @example
+ * ```tsx
+ * <Step5
+ *  onNext={(data) => console.log(data)}
+ *  onPrev={() => console.log('Back to previous step')}
+ * />
+ * ```
+ */
 export function Step5(props: Readonly<Step5Props>) {
   const { onNext, onPrev } = props
   const { step5Data } = useAppState()
