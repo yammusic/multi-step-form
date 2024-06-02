@@ -2,6 +2,25 @@ import React from 'react'
 import type { TextInputProps } from './types'
 import { MaskedInput, createDefaultMaskGenerator } from 'react-hook-mask'
 
+/**
+ * Text input component.
+ *
+ * @param props - Component props.
+ * @returns A text input component.
+ *
+ * @example
+ * ```tsx
+ * <TextInput
+ *   label="Username"
+ *   name="username"
+ *   placeholder="Enter your username"
+ *   onChange={(e) => setUsername(e.target.value)}
+ *   value={username}
+ *   error={errors.username}
+ *   required
+ * />
+ * ```
+ */
 export function TextInput(props: Readonly<TextInputProps>) {
   const { label, mask, name, helperText, error, required, ...rest } = props
   const hasError = typeof error?.message === 'string'

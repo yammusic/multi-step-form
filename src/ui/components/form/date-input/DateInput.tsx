@@ -3,6 +3,23 @@ import Datepicker from 'react-tailwindcss-datepicker'
 
 import type { DateInputProps } from './types'
 
+/**
+ * DateInput component.
+ *
+ * @param props - The props for the DateInput component.
+ * @returns A DateInput component.
+ *
+ * @example
+ * <DateInput
+ *   label="Date of Birth"
+ *   name="dateOfBirth"
+ *   helperText="Please select your date of birth"
+ *   error={{ message: 'Invalid date' }}
+ *   required
+ *   format="MM/DD/YYYY"
+ *   maxDate={new Date()}
+ * />
+ */
 export function DateInput(props: Readonly<DateInputProps>) {
   const { label, name, helperText, error, required, ...rest } = props
   const hasError = typeof error?.message === 'string'

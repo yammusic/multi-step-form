@@ -1,6 +1,21 @@
 import React from 'react'
 import type { CheckboxInputProps } from './types'
 
+/**
+ * Renders a checkbox input component.
+ *
+ * @param props - The props for the CheckboxInput component.
+ * @returns A CheckboxInput component.
+ *
+ * @example
+ * <CheckboxInput
+ *   label="Remember me"
+ *   name="remember"
+ *   checked={isChecked}
+ *   onChange={handleChange}
+ *   error={errors.remember}
+ * />
+ */
 export function CheckboxInput(props: Readonly<CheckboxInputProps>) {
   const { label, name, error, ...rest } = props
   const hasError = typeof error?.message === 'string'

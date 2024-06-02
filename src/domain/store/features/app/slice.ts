@@ -15,6 +15,9 @@ import {
 } from './actions'
 import type { AppState } from './types'
 
+/**
+ * The initial state of the application.
+ */
 const initialState: AppState = {
   isReady: false,
   step1Data: null,
@@ -25,6 +28,9 @@ const initialState: AppState = {
   step5Data: null,
 }
 
+/**
+ * Configuration for persisting the Redux state.
+ */
 const persistConfig = {
   blacklist: [
     'isReady',
@@ -34,6 +40,11 @@ const persistConfig = {
   version: 1,
 }
 
+/**
+ * The Redux slice for the application.
+ *
+ * This slice handles the state updates based on the dispatched actions.
+ */
 export const appSlice = createSlice({
   name: 'app',
   initialState,
@@ -76,4 +87,7 @@ export const appSlice = createSlice({
   },
 })
 
+/**
+ * The persisted reducer for the application.
+ */
 export const appReducer = persistReducer<AppState>(persistConfig, appSlice.reducer)

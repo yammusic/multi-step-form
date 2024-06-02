@@ -2,6 +2,19 @@ import React from 'react'
 
 import type { StepContentProps } from './types'
 
+/**
+ * A React functional component that represents the content of a step in a multi-step form.
+ *
+ * @param {Readonly<StepContentProps>} props - The properties for the StepContent component.
+ * @returns {JSX.Element} The content of the step.
+ *
+ * @example
+ * ```tsx
+ * <StepContent title="Step 1" description="Enter your personal information">
+ *   <input type="text" />
+ * </StepContent>
+ * ```
+ */
 export function StepContent(props: Readonly<StepContentProps>) {
   const { title, description, children } = props
 

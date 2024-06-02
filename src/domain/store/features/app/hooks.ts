@@ -16,12 +16,18 @@ import {
   setReady,
 } from './actions'
 
-/* Selectors */
+/**
+ * Custom hook to access the application state.
+ * @returns The application state from the Redux store.
+ */
 export const useAppState = () => (
   useSelector(({ app }: RootState) => app)
 )
 
-/* Actions */
+/**
+ * Custom hook to bind and provide action creators for the application.
+ * @returns The bound action creators for dispatching.
+ */
 export const useAppActions = () => ({
   ...bindActionCreators({
     appStart,

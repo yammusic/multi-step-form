@@ -1,6 +1,26 @@
 import React from 'react'
 import type { SelectInputProps } from './types'
 
+/**
+ * A select input component.
+ *
+ * @param props - Props for the SelectInput component.
+ * @returns A SelectInput component.
+ *
+ * @example
+ * <SelectInput
+ *    label="Country"
+ *    name="country"
+ *    options={[
+ *      { label: 'USA', value: 'usa' },
+ *      { label: 'Canada', value: 'canada' },
+ *      { label: 'UK', value: 'uk' },
+ *    ]}
+ *    helperText="Please select your country"
+ *    error={{ message: 'Country is required' }}
+ *    required
+ * />
+ */
 export function SelectInput(props: Readonly<SelectInputProps>) {
   const { label, name, helperText, error, required, options, ...rest } = props
   const hasError = typeof error?.message === 'string'

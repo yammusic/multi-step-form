@@ -2,10 +2,28 @@ import React, { useEffect } from 'react'
 import type { SnackbarProps } from './types'
 import { DivMotion } from '../div-motion'
 
+/**
+ * A React functional component that displays a snackbar with a message for a short duration.
+ *
+ * @param {Readonly<SnackbarProps>} props - The properties for the Snackbar component.
+ * @returns {JSX.Element | null} A snackbar element or null if no message is provided.
+ *
+ * @example
+ * ```tsx
+ * <Snackbar
+ *   message="Snackbar message"
+ *   onClose={() => {}}
+ *   color="blue"
+ * />
+ * ```
+ */
 export function Snackbar(props: Readonly<SnackbarProps>) {
   const { message, onClose, color } = props
+
+  // Return null if no message is provided
   if (!message) { return null }
 
+  // Auto-close the snackbar after 3 seconds
   useEffect(() => {
     const timer = setTimeout(onClose, 3000)
     return () => clearTimeout(timer)
