@@ -25,6 +25,28 @@ This is a multi-step form application implemented using React and Next.js. The f
 - **Responsive Design**: The form is styled using Tailwind CSS for a clean and responsive user interface.
 - **Accessibility**: The form includes accessibility features to ensure a good user experience for all users.
 
+## Architecture
+
+This codebase follows the Hexa3 architecture, which is a combination of Hexagonal Architecture and Domain-Driven Design (DDD) principles. This architecture promotes a clean separation of concerns and a modular design, making the codebase more maintainable and scalable.
+
+### Folder Structure
+
+```bash
+├── src
+│   ├── app -> (contains routes pages)
+│   ├── domain
+│   │   ├── constants -> (contains regex constants)
+│   │   ├── polyfills -> (contains JS polyfills)
+│   │   └── store -> (contains application state and actions)
+│   ├── infra
+│   │   └── services -> (contains APIs services)
+│   └── ui
+│       ├── components -> (contains UI components)
+│       ├── containers -> (contains UI containers)
+│       ├── layouts -> (contains UI layouts)
+│       └── styles -> (contains CSS styles)
+```
+
 ## Tech Stack
 
 - [React](https://reactjs.dev/)
