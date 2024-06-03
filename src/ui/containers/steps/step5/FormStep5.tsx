@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import type { SubmitHandler } from 'react-hook-form'
 import { Controller, useForm, useWatch } from 'react-hook-form'
 
-import { CheckboxInput, RadioInput } from '@/app/components'
+import { CheckboxInput, RadioInput, Spinner } from '@/app/components'
 import type { FormStep5Fields, FormStep5Props } from './types'
 
 /**
@@ -24,6 +24,7 @@ import type { FormStep5Fields, FormStep5Props } from './types'
  */
 export function FormStep5(props: Readonly<FormStep5Props>) {
   const { onSubmit, onCancel, values } = props
+  const [loading, setLoading] = useState(false)
   const { handleSubmit, formState: { errors }, control } = useForm<FormStep5Fields>({
     defaultValues: {
       notifications: false,
@@ -36,8 +37,13 @@ export function FormStep5(props: Readonly<FormStep5Props>) {
   const aboutService = useWatch({ control, name: 'aboutService' }) || values?.aboutService
   const terms = useWatch({ control, name: 'terms', defaultValue: values?.terms })
 
-  const onSubmitHandler: SubmitHandler<FormStep5Fields> = useCallback((data) => {
-    onSubmit(data)
+  const onSubmitHandler: SubmitHandler<FormStep5Fields> = useCallback(async (data) => {
+    setLoading(true)
+    try {
+      await onSubmit(data)
+    } finally {
+      setLoading(false)
+    }
   }, [onSubmit])
 
   const onCancelHandler = useCallback(() => {
@@ -136,6 +142,7 @@ export function FormStep5(props: Readonly<FormStep5Props>) {
       <div className="mt-6 flex items-center justify-end gap-x-8 pt-6">
         <button
           className="text-sm font-semibold leading-6 text-gray-900"
+          disabled={ loading }
           onClick={ onCancelHandler }
           type="button"
         >
@@ -144,9 +151,10 @@ export function FormStep5(props: Readonly<FormStep5Props>) {
 
         <button
           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          disabled={ loading }
           type="submit"
         >
-          Next
+          { loading ? <Spinner size={ 12 } /> : 'Next' }
         </button>
       </div>
     </form>
