@@ -96,7 +96,7 @@ export function FormStep2(props: Readonly<FormStep2Props>) {
           required: 'Postal code is required',
           pattern: {
             value: REGEX_POSTAL_CODE,
-            message: 'Invalid postal code"',
+            message: 'Invalid postal code',
           },
         } }
       />

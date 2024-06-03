@@ -2,8 +2,8 @@
 
 import React, { useCallback } from 'react'
 
-import { StepContent } from '@/app/components'
-import { useAppActions, useAppState } from '@/domain/store'
+import { StepContent } from '@/app/components/step-content'
+import { useAppActions, useAppState } from '@/domain/store/features/app/hooks'
 
 import { FormStep4A } from './FormStep4A'
 import type { FormStep4AFields, Step4AProps } from './types'

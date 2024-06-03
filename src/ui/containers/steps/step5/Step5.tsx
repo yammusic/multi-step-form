@@ -2,10 +2,11 @@
 
 import React, { useCallback } from 'react'
 
-import { StepContent } from '@/app/components'
+import { StepContent } from '@/app/components/step-content'
+import { useAppActions, useAppState } from '@/domain/store/features/app/hooks'
+
 import { FormStep5 } from './FormStep5'
 import type { FormStep5Fields, Step5Props } from './types'
-import { useAppActions, useAppState } from '@/domain/store'
 
 /**
  * Component for rendering Step 5 of a multi-step form.

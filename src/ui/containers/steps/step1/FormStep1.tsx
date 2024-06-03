@@ -4,7 +4,7 @@ import React, { useCallback } from 'react'
 import type { SubmitHandler } from 'react-hook-form'
 import { Controller, useForm } from 'react-hook-form'
 
-import { TextInput } from '@/app/components/form'
+import { TextInput } from '@/app/components/form/text-input'
 import { REGEX_EMAIL, REGEX_PHONE_NUMBER, REGEX_TWO_WORDS_OR_MORE } from '@/domain/constants'
 import type { FormStep1Fields, FormStep1Props } from './types'
 
