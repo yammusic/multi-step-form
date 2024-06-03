@@ -6,7 +6,8 @@
     "dev": "NODE_ENV=development next dev",
     "build": "NODE_ENV=production next build",
     "start": "NODE_ENV=production next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
@@ -36,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
     "autoprefixer": "^10.4.19",
+    "axios-mock-adapter": "^1.22.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-plugin-import": "^2.29.1",
@@ -47,6 +49,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
